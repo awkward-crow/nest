@@ -1,0 +1,206 @@
+" .vimrc file, based on /usr/share/vim/vim72/vimrc_example.vim
+
+" When started as "evim", evim.vim will already have done these settings.
+
+
+set nocompatible
+
+set modelines=0 
+
+set backspace=indent,eol,start
+
+set nobackup
+set writebackup
+
+set shortmess+=I
+set shortmess+=r
+set guioptions-=T
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+set encoding=utf-8
+set scrolloff=3
+set autoindent
+
+set showcmd
+set showmode
+" set showmatch
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set hidden
+set hlsearch
+
+noremap <Esc><Space> <Esc>
+inoremap <Esc><Space> <Esc>
+cnoremap <Esc><Space> <Esc>
+
+
+
+" mappings for dv kbd
+
+
+" so ~/.dv_map.vim, see also ~/a/vim/dv_kbd_map.vim
+
+no s :
+
+no t j
+no T <C-D>
+no c k
+no C <C-U>
+no h w
+no H $
+no n b
+no N ^
+no g l
+no G }
+no f f
+no F F
+no r h
+no R {
+no d u
+no D U
+no b n
+no B N
+no m e
+no M E
+no w gg
+no W G
+
+no a a
+no A A
+no o i
+no O I
+no e x
+vno e d
+no E dd
+no u dw
+no U d$
+no i r
+no I J
+no , yy
+no ; y$
+vno , y
+no . p
+no : P
+no p o
+no P O
+no y t
+no Y T
+no j .
+no k V
+no K v
+no x /
+no X ?
+no q s
+vno q c
+no Q C
+
+
+
+nnoremap <leader><space> :noh<cr>
+
+" set wrap
+" set textwidth=79
+" set formatoptions=qrn1
+" set colorcolumn=85
+
+set completeopt=menu,longest
+
+set wildmenu
+" set wildmode=longest,full
+" set wildmode=list:longest
+set wildmode=list:longest,full
+
+set history=50		" keep 50 lines of command line history
+
+noremap <F3> :bn<CR>
+noremap <S-F3> :bp<CR>
+noremap <F4> :b#<CR>
+noremap <F5> <c-w>w
+
+noremap <F7> :only<CR>
+noremap <F6> :bd<CR>
+
+autocmd BufEnter * cd %:p:h
+
+colorscheme less
+
+" let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-u>"
+
+call pathogen#infect()
+" call pathogen#helptags()
+
+syntax on
+filetype on
+filetype plugin indent on
+
+au BufNewFile,BufRead *.jy set filetype=python
+
+" taken from http://vim.wikia.com/wiki/Configuring_the_cursor
+
+if &term =~ "xterm\\|rxvt"
+    " use an orange cursor in insert mode
+    let &t_SI = "\<Esc>]12;orange\x7"
+    " use a red cursor otherwise
+    let &t_EI = "\<Esc>]12;lightgreen\x7"
+    " silent !echo -ne "\033]12;lightgreen\007"
+    " reset cursor when vim exits
+    autocmd VimLeave * silent !echo -ne "\033]12;yellow\007"
+    " use \003]12;gray\007 for gnome-terminal
+endif 
+
+" if &term =~ '^xterm'
+"     " solid underscore
+"     let &t_SI .= "\<Esc>[3 q"
+"     " solid block
+"     let &t_EI .= "\<Esc>[2 q"
+"     " 1 or 0 -> blinking block
+"     " 3 -> blinking underscore
+"     " Recent versions of xterm (282 or above) also support
+"     " 5 -> blinking vertical bar
+"     " 6 -> solid vertical bar
+" endif
+
+
+nnoremap <tab> %
+vnoremap <tab> %
+
+inoremap <Esc>. <C-n>
+inoremap <Esc>: <C-p>
+
+" open file under the cursor
+nnoremap <Esc>u gf
+
+nnoremap <Esc>o :w<cr>
+
+nnoremap <Esc>q gq
+
+" trim trailing whitespace
+autocmd FileType c,r autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+" comment/uncomment
+" taken from
+" http://vim.wikia.com/wiki/Comment/UnComment_visually_selected_text
+au FileType haskell,vhdl,ada let b:comment_leader = '-- '
+au FileType vim let b:comment_leader = '" '
+au FileType lisp,clojure let b:comment_leader = ';; '
+au FileType c,cpp,java,scala,javascript let b:comment_leader = '// '
+au FileType r,python,sh,make let b:comment_leader = '# '
+au FileType erlang,tex let b:comment_leader = '%% '
+noremap <silent> <Esc>, :<C-B>sil <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:noh<CR>
+noremap <silent> <Esc>; :<C-B>sil <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:noh<CR>
+
+" for vim-markdown (see github.com/plasticboy/vim-markdown)
+let g:vim_markdown_folding_disabled=1
+
+"
+" The End
+"
+
