@@ -1,0 +1,33 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+
+
+PS1='[\u@\h \W]\$ '
+
+# hg_ps1() { hg prompt " {branch}{status}" 2> /dev/null; }
+
+case "$TERM" in
+    xterm*|rxvt*)
+        PS1=' \[\033[01;30m\]\w\[\033[01;35m\]\[\033[01;36m\]\[\033[00m\] '
+        ;;
+    *)
+        ;;
+esac
+
+. ~/.bash_funs
+
+. ~/.bash_aliases
+
+
+export INPUTRC=~/.inputrc
+
+set -o vi
+
+# end
+
