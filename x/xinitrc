@@ -1,0 +1,34 @@
+# .xinitrc
+
+xrdb load ~/.Xresources
+
+xsetroot -solid black
+
+setxkbmap -option terminate:ctrl_alt_bksp
+
+# turn the bloody beep off
+xset b off
+
+setxkbmap dvorak -variant us
+xmodmap $NEST/x/spark.xmm
+
+while true
+do
+    xsetroot -name "`date +\"%A %e %B  %-H.%M\"`"
+    sleep 30s
+done &
+
+# sh ~/.fehbg &
+# $HOME/a/images/a.sh 300s $HOME/a/images/hokusai &
+
+wmname LG3D
+
+# for Glenda
+
+fontsrv &
+plumber 
+
+exec $HOME/a/dwm/bin/dwm
+
+# end
+

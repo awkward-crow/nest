@@ -1,0 +1,36 @@
+! xmodmap for dvorak
+!
+! assumes `setxkbmap dvorak`
+
+! xmodmap -e "keycode 44 = h H 1"
+! xmodmap -e "keycode 45 = t T 2"
+
+keycode  10 = exclam percent 1 exclam
+keycode  11 = parenleft asciicircum 2 at
+keycode  12 = parenright numbersign 3 numbersign
+keycode  13 = less dollar 4 dollar
+keycode  14 = minus bar 5 percent
+keycode  15 = greater at 6 asciicircum 
+keycode  16 = plus ampersand 7 ampersand
+keycode  17 = equal asterisk 8 asterisk
+keycode  18 = bracketright braceright 9 parenleft
+keycode  19 = bracketleft braceleft 0 parenright
+keycode  20 = question 0 bracketleft braceleft
+keycode  21 = grave 1 bracketright braceright
+keycode  25 = comma semicolon dead_cedilla dead_caron dead_cedilla dead_caron
+keycode  26 = period colon dead_abovedot periodcentered dead_abovedot periodcentered
+keycode  30 = g G 4 4
+keycode  31 = c C 5 5
+keycode  32 = r R 6 6
+keycode  34 = slash asciitilde
+keycode  35 = backslash plus
+keycode  44 = h H 1 1
+keycode  45 = t T 2 2
+keycode  46 = n N 3 3
+keycode  58 = m M 0 0
+keycode  60 = v V KP_Decimal
+
+clear mod5
+keysym Super_L = Mode_switch Super_L
+! keysym Menu = Mode_switch Menu
+! keysym Super_R = Mode_switch Super_R

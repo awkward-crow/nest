@@ -1,0 +1,113 @@
+! file: .Xdefaults
+!
+! taking the advice at https://wiki.archlinux.org/index.php/Font_Configuration
+! Xft.autohint: 0
+! Xft.lcdfilter: lcddefault
+! Xft.hintstyle: hintfull
+! Xft.hinting: 1
+! Xft.antialias: 1
+! Xft.rgba: rgb
+! Xft.dpi: 101
+!
+!#include ".Xcolors/t4"
+!
+XTerm*faceName: Bitstream Vera Sans Mono
+!XTerm*faceSize: 11
+XTerm*faceSize: 10
+!
+! XTerm*background: black
+! XTerm*foreground: darkgrey
+! 
+UXTerm*faceName: Bitstream Vera Sans Mono
+UXTerm*faceSize: 10
+UXTerm*cursorColor: lightgreen
+!UXTerm*cursorColor: lightblue
+!
+! UXTerm*background: black
+! UXTerm*foreground: darkgrey
+!
+!emacs*font: Monospace-10
+emacs*FontBackend: xft
+!Emacs.font: Droid Sans Mono-9
+Emacs.font: Monospace-9
+emacs*background: rgb:15/15/15
+emacs*foreground: rgb:be/be/be
+!
+!
+URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=13
+URxvt.scrollBar: off
+URxvt.fading: 10
+URxvt*letterSpace: -1
+!
+URxvt*cursorColor: yellow
+!
+! from the arch wiki
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/google-chrome
+URxvt.matcher.button: 1
+!
+!
+! Theme Four
+URxvt.background: rgb:15/15/15
+URxvt.foreground: rgb:be/be/be
+!URxvt.color0:     rgb:00/00/00
+URxvt.color0:     rgb:15/15/15
+URxvt.color1:     rgb:d3/62/65
+URxvt.color2:     rgb:ae/ce/91
+URxvt.color3:     rgb:e7/e1/8c
+URxvt.color4:     rgb:7a/7a/b0
+URxvt.color5:     rgb:96/3c/59
+URxvt.color6:     rgb:41/81/79
+URxvt.color7:     rgb:be/be/be
+URxvt.color8:     rgb:66/66/66
+URxvt.color9:     rgb:ef/81/71
+URxvt.color10:    rgb:e5/f7/79
+URxvt.color11:    rgb:ff/f7/96
+URxvt.color12:    rgb:41/86/be
+URxvt.color13:    rgb:ef/9e/be
+URxvt.color14:    rgb:71/be/be
+URxvt.color15:    rgb:ff/ff/ff
+
+! Theme Four
+!UXTerm*background: rgb:00/00/00
+UXTerm*background: rgb:12/12/12
+UXTerm*foreground: rgb:be/be/be
+!UXTerm*color0:     rgb:00/00/00
+UXTerm*color0:     rgb:12/12/12
+UXTerm*color1:     rgb:d3/62/65
+UXTerm*color2:     rgb:ae/ce/91
+UXTerm*color3:     rgb:e7/e1/8c
+UXTerm*color4:     rgb:7a/7a/b0
+UXTerm*color5:     rgb:96/3c/59
+UXTerm*color6:     rgb:41/81/79
+UXTerm*color7:     rgb:be/be/be
+UXTerm*color8:     rgb:66/66/66
+UXTerm*color9:     rgb:ef/81/71
+UXTerm*color10:    rgb:e5/f7/79
+UXTerm*color11:    rgb:ff/f7/96
+UXTerm*color12:    rgb:41/86/be
+UXTerm*color13:    rgb:ef/9e/be
+UXTerm*color14:    rgb:71/be/be
+UXTerm*color15:    rgb:ff/ff/ff
+
+!UXTerm.background: rgb:00/00/00
+!UXTerm.foreground: rgb:be/be/be
+!UXTerm.color0:  black
+!UXTerm.color1:  rgb:FF/33/33    
+!UXTerm.color2:  rgb:66/FF/33    
+!UXTerm.color3:  rgb:FF/EB/33    
+!UXTerm.color4:  rgb:33/A3/FF    
+!UXTerm.color5:  rgb:70/33/FF    
+!UXTerm.color6:  rgb:33/FF/AD    
+!UXTerm.color7:  cornsilk        
+!! The following are the "bright" colors
+!UXTerm.color8:  DarkSlateGrey
+!UXTerm.color9:  rgb:FF/99/99    
+!UXTerm.color10: rgb:B3/FF/99    
+!UXTerm.color11: rgb:FF/F5/99    
+!UXTerm.color12: rgb:99/D1/FF    
+!UXTerm.color13: rgb:B8/99/FF    
+!UXTerm.color14: rgb:99/FF/D6    
+!UXTerm.color15: rgb:FF/99/F0    
+
+! end
