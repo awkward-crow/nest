@@ -1,0 +1,24 @@
+#! /bin/sh
+
+PLAN9=/usr/lib/plan9
+
+EDITOR=E
+unset FCEDIT VISUAL
+
+PAGER=nobs
+
+font=$PLAN9/font/lucm/unicode.9.font
+
+# variables for rc(1).
+home=$HOME
+user=$USER
+
+export BROWSER EDITOR FCEDIT PAGER PLAN9 PS1 VISUAL font home user
+
+# Noto Sans is also a reasonable font
+
+# SHELL=`which rc` acme -a -f /mnt/font/Carlito/13a/font -F /mnt/font/Source\ Code\ Pro/11a/font &
+SHELL=`which rc` acme -a -f /mnt/font/Open\ Sans/11a/font -F /mnt/font/Source\ Code\ Pro/11a/font $@ &
+
+
+# end
