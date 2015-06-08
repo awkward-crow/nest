@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if [ $# -eq 1 ]; then
+    ft=$(file -b --mime-type $1);
+    if [ $ft = 'application/pdf' ] || [ $ft = 'application/postscript' ]; then
+        $HOME/a/zathura/install/bin/zathura -p /usr/lib/zathura $1 &
+    else
+        urxvt -e less -X $1 &
+    fi;
+else
+    echo "What? No file?"
+fi
+

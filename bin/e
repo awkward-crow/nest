@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ $# -eq 1 ]; then
+    urxvt -e vim $1 &
+else
+    echo "What? No file?"
+fi
+
