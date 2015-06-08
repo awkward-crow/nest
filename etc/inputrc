@@ -1,0 +1,70 @@
+# .inputrc for dv vim mappings
+
+set editing-mode vi
+
+$if mode=vi
+
+tab: complete
+# set completion-ignore-case on
+set blink-matching-paren on
+
+set keymap vi-insert
+
+"\ex": reverse-search-history
+"\eX": forward-search-history
+
+"\e.": history-search-backward
+"\e:": history-search-forward
+
+# "M-o": complete
+
+
+set keymap vi-command
+
+"\ex": reverse-search-history
+"\eX": forward-search-history
+
+"\e.": history-search-backward
+"\e:": history-search-forward
+
+# "M-o": complete
+
+"c": previous-history
+"t": next-history
+"g": forward-char
+"r": backward-char
+
+"h": vi-next-word
+"H": "$"
+"n": vi-prev-word
+"N": "^"
+"m": vi-end-word
+"M": vi-eWord
+
+"d": undo
+# "u": "dw"
+"u": kill-word
+"E": kill-whole-line
+"U": kill-line
+"e": delete-char
+
+# "a": vi-append-mode
+# "A": vi-append-eol
+"o": vi-insertion-mode
+"O": vi-insert-beg
+"q": vi-subst
+"Q": vi-change-to
+"i": vi-replace
+",": "y"
+";": "Y"
+# ".": vi-put
+".": "p"
+":": "P"
+
+$endif
+
+
+
+# end
+
+

@@ -1,0 +1,25 @@
+#
+# ~/.profile
+#
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+        PATH="$HOME/bin:$PATH"
+fi
+
+# alias x='ssh-agent startx'
+
+export DWM_LOG_FILE=$HOME/.dwm.log
+
+export VISUAL=vim
+export EDITOR=vim
+
+# export QHOME=$HOME/a/kx/q
+
+# for glenda
+export BROWER=chromium
+
+
+
+# end
+
