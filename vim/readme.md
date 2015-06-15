@@ -1,6 +1,21 @@
 # vim
 
 
+## pathogen
+
+Install: .vim/autoload/pathogen.vim
+
+
+## bundle
+
+E.g. vim-markdown, vim-clojure-static, tabular (even vim-puppet)
+
+
+## colors
+
+inc. less.vim, snake, thin, thinner; wombat256
+
+
 ## vim-r-plugin-0.9.9.7.zip
 
 downloaded from http://www.vim.org/scripts/script.php?script_id=2628

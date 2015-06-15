@@ -128,13 +128,16 @@ noremap <F6> :bd<CR>
 
 autocmd BufEnter * cd %:p:h
 
-colorscheme less
+" >>> Uncomment HERE ??!??! <<<
+" colorscheme less
 
 " let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-u>"
+" let g:SuperTabDefaultCompletionType = "context"
+" let g:SuperTabContextDefaultCompletionType = "<c-x><c-u>"
+" >>> Uncomment HERE ??!??! <<<
 
-call pathogen#infect()
+" >>> Uncomment HERE ??!??! <<<
+" call pathogen#infect()
 " call pathogen#helptags()
 
 syntax on
@@ -198,7 +201,8 @@ noremap <silent> <Esc>, :<C-B>sil <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<C
 noremap <silent> <Esc>; :<C-B>sil <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:noh<CR>
 
 " for vim-markdown (see github.com/plasticboy/vim-markdown)
-let g:vim_markdown_folding_disabled=1
+" let g:vim_markdown_folding_disabled=1
+" >>> Uncomment HERE ??!??! <<<
 
 "
 " The End

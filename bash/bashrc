@@ -20,12 +20,15 @@ case "$TERM" in
         ;;
 esac
 
-. ~/.bash_funs
+# . ~/.bash_funs
+. $NEST/bash/bash_funs
 
-. ~/.bash_aliases
+# . ~/.bash_aliases
+. $NEST/bash/bash_aliases
 
 
-export INPUTRC=~/.inputrc
+# export INPUTRC=~/.inputrc
+export INPUTRC=$NEST/etc/inputrc
 
 set -o vi
 

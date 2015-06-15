@@ -1,6 +1,6 @@
 # .xinitrc
 
-xrdb load ~/.Xresources
+xrdb load $NEST/x/Xresources
 
 xsetroot -solid black
 
@@ -28,7 +28,7 @@ wmname LG3D
 fontsrv &
 plumber 
 
-exec $HOME/a/dwm/bin/dwm
+exec $NEST/dwm/bin/dwm
 
 # end
 

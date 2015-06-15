@@ -4,7 +4,7 @@ VERSION = 5.8-dv
 # Customize below to fit your system
 
 # paths
-PREFIX = ${HOME}/a/dwm
+PREFIX = ${NEST}/dwm
 MANPREFIX = ${PREFIX}/share/man
 
 X11INC = /usr/X11R6/include
