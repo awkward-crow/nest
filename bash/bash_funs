@@ -52,12 +52,27 @@ function ge () {
 
 function se () {
         if [ $# -eq 1 ]; then
-                uxterm -e sudo vim $1 &
+                sudo vim $1
         fi
 }
 
 
-function U () {
+function i () {
+        if [ $# -eq 1 ]; then
+                vim -R $1
+        else
+                echo "What? No file?"
+        fi
+}
+
+function e () {
+        if [ $# -eq 1 ]; then
+                vim $1
+        fi
+}
+
+
+function u () {
         if [ $# -eq 1 ]; then
                 ft=$(file -b --mime-type $1)
                 if [ $ft = 'application/pdf' ]; then
