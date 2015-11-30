@@ -6,7 +6,12 @@ rm .profile
 
 rm .bashrc
 
-rm bin
+rm -rf bin
 
 rm .xinitrc
 
+rm .vimrc
+rm -rf .vim
+
+
+## end
