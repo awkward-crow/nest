@@ -1,7 +1,5 @@
 # .bash_aliases
 
-alias cj='rlwrap -a lein run -m clojure.main'
-
 alias a='h a'
 alias b='h b'
 
@@ -11,12 +9,6 @@ alias cf='tar czf'
 alias h3='python -m http.server 8123'
 
 alias r='R -q'
-
-# alias sb='rlwrap -a sbt -J-Djline.terminal=jline.UnsupportedTerminal'
-alias sb='rlwrap -a sbt'
-
-alias bu='sudo mount /dev/sda6 ~/mnt/ubu'
-alias ubu='sudo umount /dev/sda6'
 
 alias tf='tail -f'
 

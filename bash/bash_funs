@@ -17,7 +17,7 @@ function uh () {
         cd $1
     else
         echo "Too few args"
-            fi 
+    fi 
 }
 
 function ff () {
