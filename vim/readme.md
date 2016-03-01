@@ -8,7 +8,7 @@ Install: .vim/autoload/pathogen.vim
 
 ## bundle
 
-E.g. vim-markdown, vim-clojure-static, tabular (even vim-puppet)
+E.g. pony-vim-syntax/  tabular/  vim-markdown/  vim-slime/
 
 
 ## colors

@@ -2,6 +2,12 @@
 
 " When started as "evim", evim.vim will already have done these settings.
 
+let g:slime_target="tmux"
+let g:slime_default_config={"socket_name": "r-session", "target_pane": ":"}
+let g:slime_dont_ask_default=0
+
+set clipboard=unnamed
+
 
 set nocompatible
 
@@ -199,6 +205,20 @@ au FileType r,python,sh,make let b:comment_leader = '# '
 au FileType erlang,tex let b:comment_leader = '%% '
 noremap <silent> <Esc>, :<C-B>sil <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:noh<CR>
 noremap <silent> <Esc>; :<C-B>sil <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:noh<CR>
+
+" open file in another window
+command -nargs=1 E
+\ | execute ':silent !urxvt -e vim <args> &'
+\ | execute ':redraw!'
+
+" open file in another window - readonly
+command -nargs=1 I
+\ | execute ':silent !urxvt -e vim -R <args> &'
+\ | execute ':redraw!'
+
+" command abbrev, i -> view
+cabbrev i <C-R>=(getcmdtype()==':' && getcmdpos()==1 ? 'view' : 'i')<CR>
+
 
 " for vim-markdown (see github.com/plasticboy/vim-markdown)
 " let g:vim_markdown_folding_disabled=1

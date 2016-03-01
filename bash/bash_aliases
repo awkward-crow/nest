@@ -9,6 +9,7 @@ alias cf='tar czf'
 alias h3='python -m http.server 8123'
 
 alias r='R -q'
+# alias r='tmux new-session -s r-session R -q'
 
 alias tf='tail -f'
 
