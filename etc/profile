@@ -7,7 +7,9 @@ if [ -d "$HOME/bin" ] ; then
         PATH="$HOME/bin:$PATH"
 fi
 
-# alias x='ssh-agent startx'
+alias x='ssh-agent startx'
+export NEST=$HOME/nest
+export DOM=$HOME
 
 export DWM_LOG_FILE=$HOME/.dwm.log
 
