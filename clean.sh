@@ -13,5 +13,9 @@ rm .xinitrc
 rm .vimrc
 rm -rf .vim
 
+rm .Rprofile
+
+rm .tmux.conf
+
 
 ## end

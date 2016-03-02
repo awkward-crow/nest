@@ -1,0 +1,32 @@
+# file: .Rprofile
+
+# require(knitr)
+
+summ <- summary
+
+.dev <- function(display = "") {
+    grDevices::X11()
+    par(mar = c(5, 4, 2, 2))
+    mid.grey <- grey(0.5)
+    par(bg = '#151515') # 'black')
+    par(fg = mid.grey)
+    par(col.axis = mid.grey) 
+    par(col.lab = mid.grey)
+    par(col.main = mid.grey)
+    par(col.sub = mid.grey)
+    palette(c(mid.grey, rainbow(6)))
+}
+
+options(device=.dev)
+
+# dump function (or other) to a file,
+# file name is name of function + extension
+.d <- function(f, extension = ".r") {
+    n <- deparse(substitute(f))
+    dump(n, paste(n, extension, sep = ""))
+    return(n)
+}
+
+#
+# End
+#
