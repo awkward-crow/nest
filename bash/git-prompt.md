@@ -1,15 +1,15 @@
 # git-prompt
 
-## Download with wget
+## download with wget
 
 wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh 
 
 
-## .bashrc
+## bashrc
 
 Add
 
-    source ~/a/git-prompt/git-prompt.sh
+    source $NEST/bash/git-prompt.sh
     export GIT_PS1_SHOWDIRTYSTATE=1
 
 and $(__git_ps1 " %s") or similar to PS1, e.g.
