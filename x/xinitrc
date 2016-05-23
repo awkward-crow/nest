@@ -1,6 +1,7 @@
 # .xinitrc
 
 xrdb load $NEST/x/Xresources
+xrdb -merge $NEST/x/colors/confetti
 
 xsetroot -solid black
 
@@ -25,8 +26,10 @@ wmname LG3D
 
 # for Glenda
 
-# fontsrv &
-# plumber 
+fontsrv &
+plumber 
+
+xautolock -time 5 -locker xsecurelock -nowlocker xsecurelock -corners 0+00 -cornerdelay 3 &
 
 exec $NEST/dwm/bin/dwm
 
