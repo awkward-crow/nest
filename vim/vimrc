@@ -135,15 +135,15 @@ noremap <F6> :bd<CR>
 autocmd BufEnter * cd %:p:h
 
 " >>> Uncomment HERE ??!??! <<<
-" colorscheme less
+colorscheme less
 
 " let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
-" let g:SuperTabDefaultCompletionType = "context"
-" let g:SuperTabContextDefaultCompletionType = "<c-x><c-u>"
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-u>"
 " >>> Uncomment HERE ??!??! <<<
 
 " >>> Uncomment HERE ??!??! <<<
-" call pathogen#infect()
+call pathogen#infect()
 " call pathogen#helptags()
 
 syntax on
@@ -185,7 +185,7 @@ inoremap <Esc>. <C-n>
 inoremap <Esc>: <C-p>
 
 " open file under the cursor
-nnoremap <Esc>u gf
+" nnoremap <Esc>u gf
 
 nnoremap <Esc>o :w<cr>
 
@@ -221,7 +221,7 @@ cabbrev i <C-R>=(getcmdtype()==':' && getcmdpos()==1 ? 'view' : 'i')<CR>
 
 
 " for vim-markdown (see github.com/plasticboy/vim-markdown)
-" let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_folding_disabled=1
 " >>> Uncomment HERE ??!??! <<<
 
 "

@@ -20,5 +20,8 @@ ln -s $NEST/vim/colors/*.vim $DOM/.vim/colors
 ## less ?!
 lesskey $NEST/etc/lesskey 
 
+ln -s $NEST/R/Rprofile .Rprofile
+
+ln -s $NEST/tmux/tmux.conf .tmux.conf
 
 # end
