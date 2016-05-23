@@ -159,7 +159,7 @@ if &term =~ "xterm\\|rxvt"
     let &t_EI = "\<Esc>]12;lightgreen\x7"
     " silent !echo -ne "\033]12;lightgreen\007"
     " reset cursor when vim exits
-    autocmd VimLeave * silent !echo -ne "\033]12;yellow\007"
+    autocmd VimLeave * silent !echo -ne "\033]12;lightgreen\007"
     " use \003]12;gray\007 for gnome-terminal
 endif 
 
