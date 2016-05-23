@@ -3,7 +3,7 @@
 xrdb load $NEST/x/Xresources
 xrdb -merge $NEST/x/colors/solar-light
 
-xsetroot -solid black
+xsetroot -solid beige
 
 setxkbmap -option terminate:ctrl_alt_bksp
 
