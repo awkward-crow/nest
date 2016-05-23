@@ -1,5 +1,7 @@
 # .bash_aliases
 
+alias .th='. /home/sunspot/a/torch/torch/install/bin/torch-activate' 
+
 alias a='h a'
 alias b='h b'
 
