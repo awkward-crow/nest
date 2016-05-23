@@ -1,0 +1,37 @@
+# xinitrc-light
+
+xrdb load $NEST/x/Xresources
+xrdb -merge $NEST/x/colors/solar-light
+
+xsetroot -solid black
+
+setxkbmap -option terminate:ctrl_alt_bksp
+
+# turn the bloody beep off
+xset b off
+
+setxkbmap dvorak -variant us
+xmodmap $NEST/x/spark.xmm
+
+while true
+do
+    xsetroot -name "`date +\"%A %e %B  %-H.%M\"`"
+    sleep 30s
+done &
+
+# sh ~/.fehbg &
+# $HOME/a/images/a.sh 300s $HOME/a/images/hokusai &
+
+wmname LG3D
+
+# for Glenda
+
+fontsrv &
+plumber 
+
+xautolock -time 5 -locker xsecurelock -nowlocker xsecurelock -corners 0+00 -cornerdelay 3 &
+
+exec $NEST/dwm/bin/dwm
+
+# end
+
