@@ -31,7 +31,7 @@ plumber
 
 xautolock -time 5 -locker xsecurelock -nowlocker xsecurelock -corners 0+00 -cornerdelay 3 &
 
-exec $NEST/dwm/bin/dwm
+exec $NEST/dwml/bin/dwm
 
 # end
 
