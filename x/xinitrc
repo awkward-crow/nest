@@ -14,7 +14,7 @@ xmodmap $NEST/x/spark.xmm
 
 while true
 do
-    xsetroot -name "`date +\"%A %e %B  %-H.%M\"`"
+    xsetroot -name "`acpi -b | awk '{ print $3 \" \" $4 }' | sed s/,//g`  `date +%-H.%M`"
     sleep 30s
 done &
 
