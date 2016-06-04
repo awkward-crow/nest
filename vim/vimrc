@@ -150,8 +150,6 @@ syntax on
 filetype on
 filetype plugin indent on
 
-au BufNewFile,BufRead *.jy set filetype=python
-
 " taken from http://vim.wikia.com/wiki/Configuring_the_cursor
 
 if &term =~ "xterm\\|rxvt"
@@ -161,7 +159,7 @@ if &term =~ "xterm\\|rxvt"
     let &t_EI = "\<Esc>]12;lightgreen\x7"
     " silent !echo -ne "\033]12;lightgreen\007"
     " reset cursor when vim exits
-    autocmd VimLeave * silent !echo -ne "\033]12;yellow\007"
+    autocmd VimLeave * silent !echo -ne "\033]12;lightgreen\007"
     " use \003]12;gray\007 for gnome-terminal
 endif 
 
@@ -197,14 +195,19 @@ autocmd FileType c,r autocmd BufWritePre <buffer> :%s/\s\+$//e
 " comment/uncomment
 " taken from
 " http://vim.wikia.com/wiki/Comment/UnComment_visually_selected_text
-au FileType haskell,vhdl,ada let b:comment_leader = '-- '
+au FileType lua,haskell,vhdl,ada let b:comment_leader = '-- '
 au FileType vim let b:comment_leader = '" '
 au FileType lisp,clojure let b:comment_leader = ';; '
-au FileType c,cpp,java,scala,javascript let b:comment_leader = '// '
+au FileType c,cpp,java,scala,javascript,go let b:comment_leader = '// '
 au FileType r,python,sh,make let b:comment_leader = '# '
-au FileType erlang,tex let b:comment_leader = '%% '
+au FileType erlang,prolog,tex let b:comment_leader = '%% '
 noremap <silent> <Esc>, :<C-B>sil <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:noh<CR>
 noremap <silent> <Esc>; :<C-B>sil <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:noh<CR>
+
+" run tmux in a new window
+command -nargs=0 T
+\ | execute ":silent !urxvt -e tmux new-session -s tmux-session 'bash' &"
+\ | execute ':redraw!'
 
 " open file in another window
 command -nargs=1 E

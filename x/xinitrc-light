@@ -1,9 +1,9 @@
-# .xinitrc
+# xinitrc-light
 
 xrdb load $NEST/x/Xresources
-xrdb -merge $NEST/x/colors/confetti
+xrdb -merge $NEST/x/colors/solar-light
 
-xsetroot -solid black
+xsetroot -solid beige
 
 setxkbmap -option terminate:ctrl_alt_bksp
 
@@ -15,7 +15,7 @@ xmodmap $NEST/x/spark.xmm
 
 while true
 do
-    xsetroot -name "`acpi -b | awk '{ print $3 \" \" $4 }' | sed s/,//g`  `date +%-H.%M`"
+    xsetroot -name "`date +\"%A %e %B  %-H.%M\"`"
     sleep 30s
 done &
 
@@ -31,7 +31,7 @@ plumber
 
 xautolock -time 5 -locker xsecurelock -nowlocker xsecurelock -corners 0+00 -cornerdelay 3 &
 
-exec $NEST/dwm/bin/dwm
+exec $NEST/dwml/bin/dwm
 
 # end
 

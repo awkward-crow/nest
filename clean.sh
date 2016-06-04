@@ -11,7 +11,8 @@ rm -rf bin
 rm .xinitrc
 
 rm .vimrc
-rm -rf .vim
+
+# assume dir. .vim is *not* touched by hatch/clean
 
 rm .Rprofile
 
