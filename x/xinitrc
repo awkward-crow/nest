@@ -1,7 +1,8 @@
 # .xinitrc
 
 xrdb load $NEST/x/Xresources
-xrdb -merge $NEST/x/colors/confetti
+xrdb -merge $NEST/x/colors/theme-four
+# xrdb -merge $NEST/x/colors/confetti
 
 xsetroot -solid black
 

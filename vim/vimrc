@@ -204,9 +204,18 @@ au FileType erlang,prolog,tex let b:comment_leader = '%% '
 noremap <silent> <Esc>, :<C-B>sil <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:noh<CR>
 noremap <silent> <Esc>; :<C-B>sil <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:noh<CR>
 
-" run tmux in a new window
-command -nargs=0 T
-\ | execute ":silent !urxvt -e tmux new-session -s tmux-session 'bash' &"
+command -nargs=1 T
+\ | execute ":silent !urxvt -e tmux new-session -s <args> 'bash' &"
+\ | execute ':redraw!'
+
+" run R under tmux in a new window
+" command -nargs=0 T
+" \ | execute ":silent !urxvt -e tmux new-session -s r-session 'R -q' &"
+" \ | execute ':redraw!'
+
+" " run bash under tmux in a new window
+command -nargs=0 B
+\ | execute ":silent !urxvt -e tmux new-session -s bash-session 'bash' &"
 \ | execute ':redraw!'
 
 " open file in another window

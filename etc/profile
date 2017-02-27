@@ -7,7 +7,7 @@ if [ -d "$HOME/bin" ] ; then
         PATH="$HOME/bin:$PATH"
 fi
 
-alias x='ssh-agent startx'
+alias x='startx'
 export NEST=$HOME/nest
 export DOM=$HOME
 
@@ -21,7 +21,10 @@ export EDITOR=vim
 # for glenda
 export BROWER=chromium
 
+export R_LIBS=$HOME/R/x86_64-pc-linux-gnu-library/3.2
 
+export LUA_INIT=@$HOME/a/lua/init.lua
+# export LUA_INIT=@$HOME/a/lua/init-5.3.lua
 
 # end
 
