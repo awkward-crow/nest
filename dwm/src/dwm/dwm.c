@@ -727,7 +727,8 @@ drawbar(Monitor *m) {
 	if((dc.w = dc.x - x) > bh) {
 		dc.x = x;
 		if(m->sel) {
-			col = m == selmon ? dc.sel : dc.norm;
+// 			col = m == selmon ? dc.sel : dc.norm;
+			col = dc.norm;
 			drawtext(m->sel->name, col, False);
 			drawsquare(m->sel->isfixed, m->sel->isfloating, False, col);
 		}
@@ -1967,7 +1968,7 @@ bubble(const Arg *arg) {
     Client **t, **s;
 
     if(!c) return;
-    for(t = &selmon->clients; *t && *t != c; t = &(*t)->next); 
+    for(t = &selmon->clients; *t && *t != c; t = &(*t)->next);
     if(!*t) return;
     if(arg->i > 0) {
 	for(s = &(*t)->next; *s && !ISVISIBLE((*s)); s = &(*s)->next);
@@ -2015,7 +2016,7 @@ main(int argc, char *argv[]) {
     char *logfilename = getenv("DWM_LOG_FILE");
     if(logfilename == NULL)
 	die("dwm: environment variable DWM_LOG_FILE not set\n");
-	
+
         if(!(logfile = fopen(logfilename, "w")))
 		die("dwm: cannot open file %s\n", logfilename);
 
