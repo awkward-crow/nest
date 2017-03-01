@@ -1,7 +1,8 @@
 # .xinitrc
 
 xrdb load $NEST/x/Xresources
-xrdb -merge $NEST/x/colors/confetti
+xrdb -merge $NEST/x/colors/theme-four
+# xrdb -merge $NEST/x/colors/confetti
 
 xsetroot -solid black
 
@@ -15,7 +16,7 @@ xmodmap $NEST/x/spark.xmm
 
 while true
 do
-    xsetroot -name "`date +\"%A %e %B  %-H.%M\"`"
+    xsetroot -name "`acpi -b | awk '{ print $3 \" \" $4 }' | sed s/,//g`  `date +%-H.%M`"
     sleep 30s
 done &
 
