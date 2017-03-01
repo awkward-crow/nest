@@ -13,11 +13,6 @@ ln -s $NEST/bin bin
 
 ln -s $NEST/x/xinitrc .xinitrc
 
-ln -s $NEST/vim/vimrc .vimrc
-
-# assume dir. .vim exists
-echo "suggestion: ln -s $NEST/vim/colors/*.vim $DOM/.vim/colors"
-
 ## less ?!
 lesskey $NEST/etc/lesskey 
 
