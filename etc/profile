@@ -16,11 +16,12 @@ export DWM_LOG_FILE=$HOME/.dwm.log
 export VISUAL=vim
 export EDITOR=vim
 
-# export QHOME=$HOME/a/kx/q
+export QHOME=$HOME/a/kx/q
 
 # for glenda
 export BROWER=chromium
 
+export LUA_INIT=@$HOME/a/lua/init.lua
 
 
 # end
