@@ -7,7 +7,7 @@ if [ -d "$HOME/bin" ] ; then
         PATH="$HOME/bin:$PATH"
 fi
 
-alias x='startx'
+alias x='ssh-agent startx'
 export NEST=$HOME/nest
 export DOM=$HOME
 
@@ -23,6 +23,8 @@ export BROWER=chromium
 
 export LUA_INIT=@$HOME/a/lua/init.lua
 # export LUA_INIT=@$HOME/a/lua/init-5.3.lua
+
+export R_LIBS=$HOME/R
 
 # end
 
