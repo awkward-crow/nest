@@ -11,8 +11,8 @@ emacs*background: black
 emacs*foreground: darkgrey
 
 
-URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=13
-! URxvt*font: xft:Source Code Pro:pixelsize=13:antialias=true
+! URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=13
+URxvt*font: xft:Source Code Pro:pixelsize=13:antialias=true
 URxvt.scrollBar: off
 URxvt.fading: 10
 URxvt*letterSpace: -1
@@ -26,6 +26,6 @@ Xft.hintstyle: hintfull
 Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
-Xft.dpi: 101
+! Xft.dpi: 101
 
 ! end

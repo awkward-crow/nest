@@ -26,8 +26,8 @@ wmname LG3D
 
 # for Glenda
 
-fontsrv &
-plumber 
+# fontsrv &
+# plumber 
 
 xautolock -time 5 -locker xsecurelock -nowlocker xsecurelock -corners 0+00 -cornerdelay 3 &
 
